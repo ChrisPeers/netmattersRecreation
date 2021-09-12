@@ -1,0 +1,106 @@
+.about-us {
+    height: 450px;
+    width: 100%;
+    background-color: $color-blk;
+    display: flex;
+    justify-content: center;
+    font-family: $font-default;
+}
+
+.about-content {
+    width: 100%;
+    padding: 0 15px;
+    font-family: $font-default;
+    color: $color-white;
+    font-size: 1.7rem;
+    line-height: 30px;
+    & h1 {
+        font-size: 4rem;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+    & a {
+        margin-top: 40px;
+        width: 160px;
+        height: 40px;
+        display: flex;
+        flex-direction: row; 
+        align-items: center;
+        background-color: $color-white;
+        border-radius: 3px;
+        color: $color-blk;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-grey;
+        }
+
+        & p {
+            text-transform: uppercase;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+
+        & .fa-arrow-right {
+            padding-left: 0px;
+            padding-right: 8px;
+            font-size: 1.7rem;
+        }
+    }
+}
+
+@media screen and (max-width: 492px) {
+    .about-us {
+        height: 90vh;
+    }
+}
+
+@media screen and (min-width: 493px) {
+    .about-us {
+        height: 60vh;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .about-content {
+        width: 700px;
+        padding: 0 15px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .about-us {
+        background: $color-blk url(../../images/branded.png);
+        background-repeat: no-repeat;
+        background-size: auto 110%;
+        background-position: right center;
+        justify-content: center;
+    }
+
+    .about-content {
+        width: 1050px;
+    }
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1259px) {
+    .about-us {
+        height: 48vh;
+    }
+}
+
+@media screen and (min-width: 1260px) {
+    .about-us {
+        height: 53vh;
+    }
+
+    .about-content {
+        width: 1200px;
+    }
+
+    .about-container {
+        width: 600px;
+    }
+}

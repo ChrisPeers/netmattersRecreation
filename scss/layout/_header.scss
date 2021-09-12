@@ -1,0 +1,362 @@
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid black;
+    height: 168px;
+    width: 100%;
+
+}
+
+#head {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 8px;
+    align-items: center;
+    // height: 70px;
+    & :nth-child(3) {
+        order: 3;
+    }
+    & :nth-child(4) {
+        order: 4;
+    }
+    & :nth-child(5) {
+        order: 2;
+    }
+    // & div {
+    //     padding: 0 5%;
+    // }
+}
+
+.hidden {
+
+    & a {
+        text-decoration: none;
+        color: $color-blk;
+        font-size: 2.6rem;
+    }   
+}
+
+#net-logo {
+    width: 60%;
+    max-width: 360px;
+    height: auto;
+}
+
+#header-form {
+    display: flex;
+    position: relative;
+    flex-basis: 100%;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin: 11px auto;
+    & input {
+        padding: 5px 15px 5px 15px;
+        width: 100%;
+        height: 50px;
+        background-color: $color-grey;
+        font-size: 14px;
+        border: $search-border;
+        outline: $search-outline;
+        color: #666;
+    }
+    & input:focus {
+        outline: none;
+        border-color: $color-blue-glow;
+        box-shadow: 0 0 3.5px $color-blue-glow;
+    }
+    & button {
+        // padding-right: 16px;
+        position: absolute;
+        right: 5px;
+        border: none;
+        background-color: $color-grey;
+    }
+}
+
+#search-bar {
+    width: 100%;
+    display: block;
+}
+
+.fa-bars {
+    color: $color-white;
+}
+
+#head-button {
+    background-color: $color-blk;
+    // border: none;
+    border-radius: 3px;
+    border-style:solid;
+    border-color: $color-blk;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3.2rem;
+    width: 50px;
+    padding: 4px 30px;
+    .btn-span {
+        padding-top: 5px;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        line-height: 1;
+        text-transform: uppercase;
+        font-family: $font-default;
+        font-weight: 400;
+        color: $color-white;
+        pointer-events: none;
+    }
+    &:hover {
+        background-color: $color-blk-hvr;
+    }
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+
+    #search-bar {
+        padding-top: 5px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .hidden {
+        display: none;
+    }
+
+    header {
+        height: 110px;
+    }
+
+    #head {
+        justify-content: space-around;
+        padding: 0px;
+        height: 70px;
+
+        & :nth-child(3) {
+            order: 1;
+        }
+        & :nth-child(4) {
+            order: 1;
+        }
+        & :nth-child(5) {
+            order: 1;
+        }
+    }
+
+    #header-form {
+
+        & button {
+            padding: 16px 20px;
+            position: relative;
+            height: 55px;
+            width: 64px;
+            background-color: $color-grey-lg;
+            color: $color-white;
+            font-size: 2.2rem;
+            border-radius: 3px;
+            border: 1px solid #e5e5e5;
+            outline: $search-outline;
+
+            &:hover {
+                background-color: $color-grey-hvr;
+            }
+        }
+    }
+}
+
+// The search bar moves to the top row and is smaller. 
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    header {
+        font-size: 16px;
+    }
+
+    .head {
+        width: 700px;
+    }
+
+
+    #header-form {
+        padding: 0;
+        & input {
+            width: 210px;
+            height: 55px;
+            background-color: $color-white;
+            border: 1px solid #e5e5e5;
+        }
+    }
+
+    #search-bar {
+        width: 260px;
+    }
+
+    #head-button {
+        &:hover {
+            background-color: $color-blk-hvr;
+        }
+    }
+}
+
+// The support and contact buttons disapear when below 991px screensize. 
+@media screen and (max-width: 991px) {
+    
+    .header-content {
+        display: none;
+    }
+}
+
+// Style the buttons and hide the search bar (but keep the search icon)
+@media screen and (min-width: 992px) {
+
+    .head {
+        width: 1050px;
+    }
+
+    #net-logo {
+        margin-right: 7%;
+    }
+
+    #search-bar {
+        width: 5%;
+        margin-left: -3%;
+        // margin-right: -1%;
+    }
+
+    #search-input {
+        display: none;
+    }
+
+    #search-btn {
+        position: inherit;
+        right: auto;
+    }
+
+    .header-content {
+
+        // & button {
+        //     color: $color-white;
+        //     border: none;
+        //     border-radius: 3px;
+        //     height: 56px;
+        //     width: 137px;
+        // }
+        
+        & a {
+            display: inline-block;
+            color: $color-white;
+            border: none;
+            border-radius: 3px;
+            height: 56px;
+            width: 137px;
+            text-align: center;
+            line-height: 64px;
+            vertical-align: center;
+            
+        }
+        
+        & span {
+            padding-left: 5px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-family: $font-default;
+            font-size: 18px;
+            font-weight: 400;
+            text-align: center;
+        }
+    }
+
+    #btn-support {
+        background-color: $color-blue;
+        margin-right: 20px;
+        
+        &:hover {
+            background-color: $color-blue-hvr;
+        }
+    }
+    
+    #btn-contact {
+        background-color: $color-grey-lg;
+        width: 145px;
+        margin-right: 20px;
+
+        &:hover {
+            background-color: $color-grey-hvr;
+        }
+    }
+}
+
+// Search bar reappears
+@media screen and (min-width: 1260px) {
+
+    #head {
+        justify-content: center;
+    }
+
+    #head-button {
+        margin-left: 31px;
+    }
+    
+    #search-input {
+        display: block;
+    } 
+
+    #header-form {
+        padding: 0;
+        & input {
+            width: 210px;
+            height: 55px;
+            background-color: $color-white;
+            border: 1px solid #e5e5e5;
+        }
+    }
+
+    #search-bar {
+        width: 260px;
+        margin-left: 4px;
+    }
+}
+
+// Search Menu button and the animation for it when clicked
+.hamburger-box {
+    width: 33px;
+    height: 19px; 
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    pointer-events: none;
+
+    .hb-inner, .hb-top, .hb-bottom {
+      width: 33px;
+      height: 3px;
+      background: $color-white;
+      transition: transform 150ms ease-in-out 0ms, opacity 100ms ease-in-out 160ms;
+    }
+  }
+
+  .website.active #sticky-head header #head #head-button .hamburger-box {
+
+    .hb-inner, .hb-top, .hb-bottom {  
+        transition: transform 160ms ease-in-out 160ms, opacity 100ms ease-in-out 0s;
+    }
+
+    .hb-top {
+        transform: translate3d(0px, 7.7px, 0px) rotate(45deg) scaleY(0.75);
+    }
+
+    .hb-inner {
+        opacity: 0;
+    }
+
+    .hb-bottom {
+        transform: translate3d(0px, -7.7px, 0px) rotate(-45deg ) scaleY(0.75);
+    }
+}

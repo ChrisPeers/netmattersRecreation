@@ -1,0 +1,249 @@
+.newsletter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: $color-grey;
+}
+
+.newslet-container {
+    justify-content: center;
+    width: 90%;
+    color: $color-blk;
+    font-family: $font-default;
+    margin: 0 0 18.09px 0px;
+
+    & h1 {
+        font-size: 2.7rem;
+        font-weight: 500;
+        letter-spacing: 0.2rem;
+    }
+
+    & strong {
+        font-size: 1.3rem;
+        font-weight: 600;
+        line-height: 0.9rem;
+        letter-spacing: 0.2rem;
+    }
+}
+
+.newslet-btn {
+    width: 120px;
+    height: 50px;
+    display: flex;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: $color-blk;
+    & p {
+        font-size: 1.4rem;
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+        margin-left: auto;
+        margin-right: auto;
+        text-transform: uppercase;
+        color: $color-white;
+        
+    }
+    &:hover {
+        background-color: $color-blk-hvr;
+    }
+}
+
+.newslet-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & strong::after {
+        content: " *";
+        color: $color-nav-red;
+    }
+    & input[type=text] {
+        // width: 280px;
+        width: 100%;
+        height: 40px;
+        border: 1px solid $color-grey;
+        padding: 15px 15px;
+        font-size: 1.6rem;
+    }
+    & input:focus {
+        outline: none;
+        border-color: $color-blue-glow;
+        box-shadow: 0 0 3.5px $color-blue-glow;
+    }
+}
+
+#newslet-name {
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+
+.newslet-check {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+
+    & a {
+        color: $color-blk;
+    }
+}
+
+.newslet-checkbox {
+    display: flex;
+    flex-direction: row;
+
+    &::before {
+        display: block;
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        content: "";
+        border: solid 3px $color-blk;
+        border-radius: 3px;
+    }
+
+    & input[type=checkbox]:checked ~ ::before {
+        content: "\2714";
+        width: 28px;
+        height: 28px;
+        background: $color-blk;
+        background-size: 80%;
+        border: solid 3px $color-blk;
+        color: white;
+        border-radius: 3px;
+        position: absolute;
+        display: block;
+        text-align: center;
+        line-height: 28px;
+        font-size: 18px;
+    }
+
+    & .newslet-span {
+        display: inline-block;
+        margin-left: 50px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .newslet-container {
+        margin-left: 18px;
+        width: 700px;
+    }
+
+    .newslet-input {
+        & input[type=text] {
+            width: 600px;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .newslet-input {
+        flex-direction: row;
+        & input[type=text] {
+            margin-top: 5px;
+            height: 50px;
+        }
+    }
+
+    .newslet-container {
+        margin-bottom: 50px;
+
+        & h1 {
+            margin: 50px 0px 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1259px) {
+    .newsletter {
+        width: 100%;
+    }
+    .newslet-input {
+        flex-direction: row;
+        justify-content: start;
+        & input[type=text] {
+            width: 400px;
+        }
+    }
+    .newslet-container {
+        width: 900px;
+        margin-left: 18px;
+        justify-content: start;
+        & h1 {
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            position: relative;
+            // left: -192px;
+        }
+        & .newslet-btn {
+            display: flex;
+            justify-content: start;
+            position: relative;
+            // margin: 20px auto;
+            // left: -330px;
+        }
+    }
+
+    .newslet-checkbox {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        width: 780px;  
+    }
+
+    .first-input {
+        margin-right: 50px;
+    }
+}
+
+@media screen and (min-width: 1260px) {
+    .newslet-input {
+        flex-direction: row;
+        justify-content: start;
+        & input[type=text] {
+            width: 540px;
+        }
+    }
+    .newslet-container {
+        width: 1115px;
+        margin-left: 18px;
+        justify-content: start;
+        
+        & h1 {
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            position: relative;
+            // margin: 20px auto;
+            // left: -310px;
+        }
+        & .newslet-btn {
+            display: flex;
+            justify-content: start;
+            position: relative;
+            // margin: 20px auto;
+            // left: -450px;
+        }
+    }
+
+    .checkbox-div {
+        // width: 1100px;
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: center;
+    }
+
+    .newslet-checkbox {
+        width: 1015px;
+        // margin: 0 auto;
+    }
+
+}
+
+
+
+

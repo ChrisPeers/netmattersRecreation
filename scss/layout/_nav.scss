@@ -1,0 +1,331 @@
+ul {
+    list-style: none;
+}
+
+#nav-container {
+    background-color: $color-blk;
+    width: 100%;
+    border-bottom: 1.5px solid $color-grey-lg;
+    display: flex;
+    justify-content: center;
+}
+
+#nav-ul {
+    width: 100%;
+    height: 100px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: $color-white;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 40px;
+    // border-right: 1px solid rgba(0, 0, 0, 0.25);
+    // border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-main-li {
+    height: 102px;
+    // width: 195px;
+    width: 193px;
+    padding: 20px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    text-transform: uppercase;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(0, 0, 0, 0.25);
+    margin-top: 29px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    & a {
+        align-items: center;
+        padding: 19px 10px 18px;
+        text-transform: uppercase;
+    }
+    & span {
+        font-family: $font-default;
+    }
+}
+
+.nav-first-span {
+    padding-top: 10px;
+    font-size: 1.1rem;
+}
+
+.nav-sec-span {
+    font-size: 1.8rem;
+}
+
+.web:hover {
+    background-color: $color-nav-purp;
+    .fa-code {
+        color: $color-white;
+    }
+}
+
+.it:hover {
+    background-color: $color-blue;
+    .fa-desktop {
+        color: $color-white;
+    }
+}
+
+.tele:hover {
+    background-color: $color-nav-red;
+    .fa-phone-alt {
+        color: $color-white;
+    }
+}
+
+.bes:hover {
+    background-color: $color-nav-blue;
+    .fa-th {
+        color: $color-white;
+    }
+}
+
+.dig:hover {
+    background-color: $color-nav-green;
+    .fa-signal {
+        color: $color-white;
+    }
+}
+
+.cyb:hover {
+    background-color: $color-nav-radred;
+    .fa-shield-alt {
+        color: $color-white;
+    }
+}
+
+// Set the colour of the nav icons
+.fa-code {
+    color: $color-nav-purp;
+}
+.fa-desktop {
+    color: $color-blue;
+}
+.fa-phone-alt {
+    color: $color-nav-red;
+}
+.fa-th {
+    color: $color-nav-blue;
+}
+.fa-signal {
+    color: $color-nav-green;
+}
+.fa-shield-alt {
+    color: $color-nav-radred;
+}
+
+#nav-a-web, #nav-a-it, #nav-a-tele, #nav-a-bes, #nav-a-dig, #nav-a-cyb  {
+    @include nav-span-col;
+}
+
+.nav-hidden {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-hidden-cont {
+    width: 940px;
+    display: flex;
+    justify-content: start;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.6px;
+    padding: 0;
+    & .hidden-hyp::after {
+        content: "—";
+        margin-left: 7px;
+        width: 30px;
+    }
+    & li {
+        height: 100%;
+        line-height: 100%;
+        vertical-align: middle;
+        padding: 10px 0px;
+    }
+    & li a {
+        font-family: $font-default;
+        font-size: 1.1rem;
+        line-height: 1rem;
+        text-decoration: none;
+        margin-top: 50px;
+    }
+}
+
+#first-li {
+    padding-left: 0;
+}
+#second-li {
+    padding-left: 0;
+}
+#third-li {
+    padding-left: 0;
+}
+#fourth-li {
+    padding-left: 0;
+}
+#fifth-li {
+    padding-left: 0;
+}
+#sixth-li {
+    padding-left: 0;
+}
+
+.web-dropdown{
+    width: 100%;
+    height: 45px;
+    color: white;
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    top: 210px;
+    background: $color-purp-hvr;
+    align-items: center;
+    justify-content: center;
+}
+
+.it-dropdown {
+    width: 100%;
+    height: 45px;
+    color: white;
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    top: 210px;
+    background: $color-blue-hvr;
+    align-items: center;
+    justify-content: center;
+}
+
+.tele-dropdown {
+    width: 100%;
+    height: 45px;
+    color: white;
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    top: 210px;
+    background: $color-nav-red-hvr;
+    align-items: center;
+    justify-content: center;
+}
+
+.bes-dropdown {
+    width: 100%;
+    height: 45px;
+    color: white;
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    top: 210px;
+    background: $color-nav-blue-hvr;
+    align-items: center;
+    justify-content: center;
+}
+
+.dig-dropdown {
+    width: 100%;
+    height: 45px;
+    color: white;
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    top: 210px;
+    background: $color-nav-green-hvr;
+    align-items: center;
+    justify-content: center;
+}
+
+.cyber-dropdown {
+    width: 100%;
+    height: 45px;
+    color: white;
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    top: 210px;
+    background: $color-nav-radred-hvr;
+    align-items: center;
+    justify-content: center;
+}
+
+.web:hover .web-dropdown {
+    visibility: visible;
+  }
+  
+.it:hover .it-dropdown {
+    visibility: visible;
+}
+
+.tele:hover .tele-dropdown {
+    visibility: visible;
+}
+
+.bes:hover .bes-dropdown {
+    visibility: visible;
+}
+
+.dig:hover .dig-dropdown {
+    visibility: visible;
+}
+
+.cyb:hover .cyber-dropdown {
+    visibility: visible;
+}
+
+
+// Hide the nav bar completely when 991px screen width or below
+@media screen and (max-width: 991px) {
+    nav {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1055px) {
+    .nav-hidden-cont {
+        width: 1000px;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    .nav-hidden-cont {
+        width: 1050px;
+    }
+}
+
+@media screen and (min-width: 1260px) {
+    .nav-hidden-cont {
+        width: 1165px;
+        & li a {
+            font-size: 1.6rem;
+            line-height: 1rem;
+        }
+    }
+
+    .nav-hidden-cont {
+        & .hidden-hyp::after {
+            margin-left: 8px;
+            width: 30px;
+        }
+        & li {
+            padding: 20px 8px;
+        }
+        & li a {
+            font-size: 1.6rem;
+            line-height: 1rem;
+
+        }
+    }
+}

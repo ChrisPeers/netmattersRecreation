@@ -1,0 +1,294 @@
+.service-section {
+    display: flex;
+    justify-content: center;
+    background-color: $color-white;
+}
+
+.service-content {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-card {
+    height: 320px;
+    border: solid 2px $color-grey;
+    border-radius: 3px;
+    background-color: $color-white;
+    text-align: center;
+    margin: 30px 15px;
+    padding: 30px 30px 0;
+    color: $color-blk;
+    font-family: $font-default;
+    filter: drop-shadow(0px 12px 15px $color-grey);
+
+    & h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    & a {
+        width: 120px;
+        height: 50px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: pink;
+        border-radius: 3px;
+
+        & p {
+            margin-left: auto;
+            margin-right: auto;
+            text-transform: uppercase;
+            color: $color-white;
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.line-break {
+    width: 25px;
+    height: 3px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $color-blk;
+}
+
+.card-para {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 400;
+    height: 60px;
+}
+
+.card-icon {
+    height: 50px;
+    width: 50px;
+    padding-top: 15px;
+    background-color: pink;
+    border-radius: 50%;
+}
+
+//The section of code below makes the service cards change colour when they're hovered over (using a mixin). 
+
+.service-bs {
+    @include hover-color-change($color-nav-blue);
+}
+
+.service-it {
+    @include hover-color-change($color-blue);
+}
+
+.service-dm {
+    @include hover-color-change($color-nav-green);
+}
+
+.service-ts {
+    @include hover-color-change($color-nav-red);
+}
+
+.service-wd {
+    @include hover-color-change($color-nav-purp);
+}
+
+.service-cs {
+    @include hover-color-change($color-nav-radred);
+}
+
+.service-dt {
+    @include hover-color-change($color-nav-purp);
+}
+
+@media screen and (max-width: 767px) {
+    #first-card {
+        margin-top: 50px;
+    }
+    
+    #last-card {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .service-content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 700px;
+    }
+
+    .service-dm, .service-it, .service-bs, .service-ts, .service-wd {
+        margin-bottom: 0px;
+    }
+
+    .service-card {
+        width: 700px;
+        height: 295px;
+    }
+    .service-ts {
+        flex-grow: 1;
+        flex-basis: 33%
+    }
+
+    .service-wd {
+        flex-grow: 1;
+        flex-basis: 33%
+    }
+
+    .service-cs {
+        flex-grow: 1;
+        flex-basis: 33%
+    }
+
+    .service-dt {
+        flex-grow: 1;
+        flex-basis: 33%
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .service-content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .service-card {
+        width: 285px;
+    }
+
+    .card-para {
+        height: 80px;
+    }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1066px){ 
+
+    .service-content {
+        width: 1050px;
+    }
+
+    .service-ts {
+        margin-top: 0px;
+        flex-grow: 1;
+        flex-basis: 33%
+    }
+
+    .service-wd {
+        margin-top: 0px;
+        flex-grow: 1;
+        flex-basis: 33%
+    }
+
+    .service-cs {
+        margin-top: 0px;
+        flex-grow: 1;
+        flex-basis: 33%
+    }
+
+    .service-dt {
+        margin-top: 0px;
+        flex-grow: 1;
+        flex-basis: 33%
+    }
+}
+
+@media screen and (min-width: 1067px) and (max-width: 1259px){ 
+    .service-card {
+        width: 320px;
+    }
+
+    .service-content {
+        width: 1050px;
+    }
+
+    .service-ts {
+        margin-top: 0px;
+        flex-grow: 1;
+        flex-basis: 33%
+    }
+
+    .service-wd {
+        margin-top: 0px;
+        flex-grow: 1;
+        flex-basis: 33%
+    }
+
+    .service-cs {
+        margin-top: 0px;
+        flex-grow: 1;
+        flex-basis: 33%
+    }
+
+    .service-dt {
+        margin-top: 0px;
+        flex-grow: 1;
+        flex-basis: 33%
+    }
+}
+
+@media screen and (min-width: 1260px) {
+    .service-card {
+        width: 320px;
+    }
+    .service-content {
+        width: 1200px;
+        justify-content: center;
+        align-items: center;
+    }
+    .service-section {
+        
+        // width: 75%;
+        // transform: translateX(16.5%);
+    }
+    // .service-content {
+    //     margin-left: 10%;
+    //     margin-right: 10%;
+    //     min-width: 300px;
+    //     max-width: 500px;;
+    // }
+    .service-bs {
+        flex-grow: 0;
+        flex-basis: 370px;
+    }
+
+    .service-it {
+        flex-grow: 0;
+        flex-basis: 370px;
+    }
+
+    .service-dm {
+        flex-grow: 0;
+        flex-basis: 370px;
+    }
+    .service-ts {
+        margin-top: 0px;
+        flex-grow: 0;
+        flex-basis: 270px;
+    }
+
+    .service-wd {
+        margin-top: 0px;
+        flex-grow: 0;
+        flex-basis: 270px;
+    }
+
+    .service-cs {
+        margin-top: 0px;
+        flex-grow: 0;
+        flex-basis: 270px;
+    }
+
+    .service-dt {
+        margin-top: 0px;
+        flex-grow: 0;
+        flex-basis: 270px;
+    }
+}

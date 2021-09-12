@@ -1,0 +1,110 @@
+.accred{
+    width: 100%;
+    background-color: $color-white;
+}
+
+.accred-container{
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 40px 0;
+    justify-content: center;
+    background-color: $color-white;
+
+    & div {
+        padding: 10px 0;
+    }
+
+    & .col {
+        display: none;
+    }
+
+    & div:hover .col {
+        display: inline;
+    }
+
+    & div:hover .grey {
+        display: none;
+    }
+}
+
+.acc-opacity {
+    opacity: 90%;
+}
+
+.google {
+    padding-right: 20px;
+}
+
+.microsoft {
+   height: 48px;
+   padding-right: 20px;
+}
+
+.first-img {
+    height: 50px;
+    width: auto;
+    padding: 0 20px;
+}
+
+.second-img {
+    height: 60px;
+    width: auto;
+    // padding: 0 15px;
+}
+
+.middle-img {
+    padding: 0 30px;
+}
+
+@media screen and (max-width: 767px) {
+    .accred {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width:1259px) {
+.accred-container {
+    padding-bottom: 20px;
+}
+    .microsoft {
+       height: 80px;
+    }
+    
+    .first-img {
+        height: 80px;
+    }
+
+    .second-img {
+        height: 80px;
+    }
+}
+
+@media screen and (min-width: 1260px) {
+    .accred-container {
+        & span {
+            width: 100%;
+        }
+    }
+    .microsoft {
+        height: 70px;
+        padding-left: 50px;
+     }
+     
+     .first-img {
+         height: 70px;
+         width: auto;
+         padding: 0 50px;
+     }
+     
+     .second-img {
+         height: 50px;
+         width: auto;
+     }
+     
+     .middle-img {
+         padding: 0 150px;
+     }
+}
