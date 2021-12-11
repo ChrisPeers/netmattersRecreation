@@ -1,0 +1,252 @@
+.enquiry-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+    background-color: white;
+}
+
+.enquiry-container {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: none;
+  justify-content: space-between;
+  font-family: $font-default;
+}
+
+.enquiry-form {
+  width: 770px;
+  height: auto;
+
+  display: flex; 
+  flex-direction: column;
+  // margin: 0px 15px;
+  background: #e6e7e9;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+
+.submit {
+  @include article-btn-style;
+  background-color: $color-nav-purp;
+  width: 150px;
+  height: 50px;
+  border: 1px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.7rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+  justify-content: center;
+  padding-top: 12px;
+
+  &:hover {
+    background-color: $color-purp-hvr;
+  }
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+          
+.form-section {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  margin-bottom: 15px;
+
+  & label {
+    margin-bottom: 3px;
+    font-weight: 500;
+    font-size: 1.7rem;
+    color: $color-blk;
+
+    &::after {
+      content: " *";
+      color: #d64953; 
+    }
+  }
+
+  & input {
+    height: 47px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background: white;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    width: 340px;
+    padding: 5px 15px;
+
+    &:focus {
+      border-color: #5bc0de;
+      outline: 0;
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(85, 179, 207, 0.6);
+    }
+  }
+
+  & textarea {
+    resize: none;
+    width: 100%;
+    height: 100px;
+
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background: #fff;
+    padding: 5px 15px;
+
+    &:focus {
+      border-color: #5bc0de;
+      outline: 0;
+      box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(90, 188, 218, 0.6);
+    }
+  }
+
+  // Styling for inputs when validation fails
+  & input.error, textarea.error {
+    border: 1px solid red;
+  }
+}
+      
+.contact-info {
+  width: 33.33%;
+  padding: 30px 15px 0px 0px;
+  
+  & strong {
+    font-weight: 600;
+  }
+
+  & p {
+    margin-bottom: 25px;
+    margin-top: 0px;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  & a {
+    text-decoration: none;
+
+    & h3 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: $color-nav-purp;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.form-section {
+  width: 100%;
+}
+
+.supportChevron {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.marketing-checkbox {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+// .status-container{
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   width: 100%;
+//   padding-bottom: 20px;
+// }
+// .message-status{
+//   width: 50%;
+//   border: 1px solid green;
+//   padding: 10px;
+//   font-family: $font-default;
+//   font-size: 1.6rem;
+//   font-weight: 500;
+//   text-align: center;
+
+// }
+
+.form-padding {
+  @media (min-width: 1260px) { 
+    padding-right: 25px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1259px) {
+  .enquiry-container {
+    flex-direction: column-reverse;
+    width: 720px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .enquiry-container {
+    flex-direction: column-reverse;
+    width: 95%;
+    margin: 0px 15px;
+  }
+}
+
+@media screen and (max-width: 772px) {  
+  .contact-info {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .enquiry-container {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .form-row {
+   flex-direction: column;
+  }
+  .form-section{
+    & input {
+      width: 100%;
+    }
+  }
+} 
+
+@media screen and (min-width: 992px) {
+  .enquiry-container {
+    width: 890px;
+  }
+  .form-section {
+    & input {
+      width: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: 1259px) {
+  .enquiry-form {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .enquiry-container {
+    width: 1100px;
+  }
+
+  .form-section {
+    & input {
+      width: 340px;
+    }
+  }
+  .contact-info {
+    padding-left: 25px;
+  }
+}

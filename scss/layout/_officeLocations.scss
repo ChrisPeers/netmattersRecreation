@@ -1,0 +1,170 @@
+.officesMainContainer {
+    width: 100%;
+    background: white;
+    // box-shadow: inset 0 10px 30px 10px rgba(102, 102, 102, 0.1);
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+   
+.officesSubContainer {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    flex-direction: column;
+}
+  
+.office {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: $font-default;
+    padding-top: 25px;
+}
+  
+.officeContent {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.officeImage {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+
+    & img {
+        width: 100%;
+        height: auto;
+    }
+}
+    
+.office-info {
+    padding: 30px;
+
+    & a {
+        text-decoration: none;
+
+        & h2 {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: $color-blk;
+        margin-top: -5px;
+        margin-bottom: 10px;
+        letter-spacing: .4px;
+        }
+    }
+
+    & ul {
+        list-style-type: none;
+        padding-left: 0px;
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: #666;
+        margin: 0px;
+        line-height: 22px;
+        letter-spacing: .4px;
+        margin-bottom: 10px;
+    }
+}
+
+.officePhone {
+    font-weight: 700;
+    text-decoration: none;
+    color: $color-nav-purp;
+    margin-top: 5px;
+    letter-spacing: .4px;
+
+    &:hover {
+    text-decoration: underline;
+    }
+
+    & h3 {
+    margin: 0px;
+    font-size: 26px;
+    }
+}
+
+  
+.btnMore {
+    @include article-btn-style;
+    background-color: $color-nav-purp;
+    width: 150px;
+    height: 50px;
+
+    &:hover {
+        background-color: $color-purp-hvr;
+    }
+}
+        
+.map {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 771px) {
+    .officesSubContainer {
+        margin: 0px 15px;
+        flex-direction: column;
+        width: auto;
+    }
+}
+  
+@media screen and (min-width: 772px) {
+    .office {
+        width: 100%;
+    }
+
+    .officeImage {
+       width: 100%;
+       height: auto;
+    }
+
+    .map {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .office {
+        width: 280px;
+    }
+
+    .officeImage {
+        width: 100%;
+        height: auto;
+     }
+
+    .map {
+        width: 100%;
+    }
+
+    .officesSubContainer {
+        width: 890px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1260px) {
+    .office {
+        width: 350px;
+    }
+
+    .officeImage {
+        width: 100%;
+        height: auto;
+    }
+
+    .map {
+        width: 100%;
+    }
+
+    .officesSubContainer {
+        width: 1100px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

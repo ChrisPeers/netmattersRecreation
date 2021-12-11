@@ -1,0 +1,119 @@
+.contactContainer {
+    width: 100%;
+    height: 160px;
+    padding-top: 17vh;
+    background-color: $color-white;
+    display: flex;
+    justify-content: center;
+}
+
+.currentPage {
+    width: 100%;  
+    height: 30px;
+    font-family: $font-default;
+    font-size: 1.3rem;
+    font-weight: 400;
+
+    & ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    & li {
+        float: left;
+        padding: 0;
+
+        & a {
+            text-decoration: none;
+        }
+
+        & a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.ourOfficesSmallContainer {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    background-color: $color-blk;
+}
+.ourOfficesSmall {
+    width: 700px;
+    & h1 {
+        color: $color-white;
+        font-size: 3.2rem;
+        font-weight: 500;
+    }
+}
+
+.ourOfficesBigContainer {
+    display: none;
+}
+
+.error {
+    border: solid 1px red;
+}
+
+
+@media screen and (max-width: 767px) {
+    .currentPage {
+        display: none;
+    }
+
+    .ourOfficesSmall {
+        & h1 {
+            padding-left: 18px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .currentPage {
+        width: 690px;
+    }
+    .contactContainer {
+        padding-top: 12vh;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .currentPage {
+        width: 890px;
+    }
+    .contactContainer {
+        padding-top: 22.2vh;
+        height: 252px;
+    }
+    .ourOfficesSmallContainer {
+        display: none;
+    }
+    .ourOfficesBigContainer {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        background-color: $color-white;
+        box-shadow: inset 0 10px 30px 10px rgba(102, 102, 102, 0.1);
+    }
+    .ourOfficesBig {
+        padding-top: 35px;
+        width: 890px;
+        & h1 {
+            font-size: 3.5rem;
+            font-weight: 400;
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1260px) {
+    .currentPage {
+        width: 1100px;
+    }
+    .ourOfficesBig {
+        width: 1100px;
+    }
+}

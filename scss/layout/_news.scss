@@ -185,15 +185,15 @@
 }
 
 .art-1-image {
-    @include news-image-bg("../../images/1st-line-support.jpg");
+    @include news-image-bg("../images/1st-line-support.jpg");
 }
 
 .art-2-image {
-    @include news-image-bg("../../images/web-project-manager.jpg");
+    @include news-image-bg("../images/web-project-manager.jpg");
 }
 
 .art-3-image {
-    @include news-image-bg("../../images/rob-becomes-a.jpg");
+    @include news-image-bg("../images/rob-becomes-a.jpg");
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px){

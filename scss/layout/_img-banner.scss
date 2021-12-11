@@ -24,6 +24,7 @@
 
 .item {
     height: 80vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,7 +80,10 @@
         position: absolute;
         border: solid 2.5px $color-white;
         border-radius: 50%;
-        left: -6px;  top: -6px;
+        // left: -6.5px;  
+        // top: -6.5px;
+        left: -0.65rem;  
+        top: -0.65rem;
         padding: 4px;
     }
 }
@@ -105,7 +109,7 @@
             margin-left: 150px;
         }
 
-        @media screen and (max-width: 992px) { 
+        @media screen and (max-width: 991px) { 
             width: 100%;
             margin-left: 0px;
             text-align: center;
@@ -214,5 +218,82 @@
 @media screen and (max-width: 767px) {
     .carousel-text {
         padding-top: 100px;
+    }
+    .banner {
+        padding-top: 17vh;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .banner {
+        padding-top: 11vh;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .banner {
+        padding-top: 22vh;
+    }
+
+    .btn-banner {
+    margin: auto 0px auto 0px;
+    }
+
+    .carousel-text {
+        margin: auto 0px auto 25px;
+    }
+}
+
+@media screen and (min-width: 1225px) {
+    .carousel-text {
+        margin: auto 0px auto 35px;
+    }
+}
+
+@media screen and (min-width: 1260px) {
+    .carousel-text {
+        margin: auto 0px auto 45px;
+    }
+}
+
+@media screen and (min-width: 1290px) {
+    .carousel-text {
+        margin: auto 0px auto 60px;
+    }
+}
+
+@media screen and (min-width: 1316px) {
+    .carousel-text {
+        margin: auto 0px auto 70px;
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .carousel-text {
+        margin: auto 0px auto 11%;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .carousel-text {
+        margin: auto 0px auto 14%;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .carousel-text {
+        margin: auto 0px auto 17%;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    .carousel-text {
+        margin: auto 0px auto 20%;
+    }
+}
+
+@media screen and (min-width: 1921px) {
+    .banner {
+        padding-top: 16vh;
     }
 }
